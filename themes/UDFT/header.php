@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="slider-box">
-                    <?php echo do_shortcode('[metaslider id="28"]'); ?>
+                    <?php echo do_shortcode('[metaslider id="6"]'); ?>
                 </div>
 
 			</header>
