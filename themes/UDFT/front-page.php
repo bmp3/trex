@@ -6,16 +6,11 @@
 
 			<?php
 
-			echo
-			'<div class="h-box">
-                 <div class="h-background"></div>
-                 <div class="h-content">
-	                 <div class="h-description">
-	                     <span>catering</span>
-	                 </div>
-	                 <h2 class="h-title">Welcome to the Best Catering Company</h2>
-                 </div>
-             </div>';
+                echo udft::section_header( 'catering', 'Welcome to the Best Catering Company' );
+                echo udft::get_archives_links( array( 'event' => array( 'title' => 'events' ),
+                                                      'product' => array( 'title' => 'Food & Drinks' ),
+                                                      'project' => array( 'title' => 'Venues' )
+                                             )  );
 
 			?>
 

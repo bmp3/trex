@@ -9,7 +9,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require_once ( 'inc/redux-config.php' );
-
+require_once ( 'inc/post-types.php' );
 
 if (function_exists('add_theme_support'))
 {
@@ -474,6 +474,62 @@ class UDFT {
         $result = array( '1' => 'Slider 1', '2' => 'Slider 2' );
 
         return $result;
+
+	}
+
+    static function section_header( $title, $description ) {
+
+        return
+            '<div class="h-box">
+                 <div class="h-background"></div>
+                 <div class="h-content">
+	                 <div class="h-description">
+	                     <span>' . $title . '</span>
+	                 </div>
+	                 <h2 class="h-title">' . $description . '</h2>
+                 </div>
+             </div>';
+
+    }
+
+
+    static function get_archives_links( $args ) {
+
+		if ( is_array( $args ) ) {
+		}
+		else { }
+
+        $imgs = array (
+        	'event'    => '/img/events1.jpg',
+            'product'  => '/img/products1.jpg',
+            'project'  => '/img/projects1.jpg'
+		);
+
+		$out = $columns = '';
+		foreach ( $args as $pt => $info ) {
+            if( $pt == 'product' ) {
+                $pt_link = get_permalink( wc_get_page_id( 'shop' ) );
+			}
+			else {
+                $pt_link = get_post_type_archive_link( $pt );
+			}
+			$columns .=
+				'<div class="archives-link ' . $pt . ' column-3">
+				      <img class="pt-archive-img" src=" ' . get_stylesheet_directory_uri() . $imgs[$pt] . '">
+				      <div class="pt-archive-title">' . $info['title'] . '</div>
+				      <div class="round-link-box bottom"><a class="round-link" href="' . $pt_link . '">' . '' . '</a> </div> 
+				</div>';
+			
+        }
+
+		$out =
+			'<div class="archives-links-box columns-box">
+                <div class="archives-links-row columns-row gap-30">' .
+                    $columns .
+                '</div>
+            </div>';
+
+		return $out;
 
 	}
 
