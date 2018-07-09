@@ -1,0 +1,42 @@
+2018-07-01T10:47:16+00:00 CRITICAL Uncaught Error: Class name must be a valid object or a string in D:\SERVER\WWW\trex\wp-content\themes\UDFT\front-page.php:9
+Stack trace:
+#0 D:\SERVER\WWW\trex\wp-includes\template-loader.php(74): include()
+#1 D:\SERVER\WWW\trex\wp-blog-header.php(19): require_once('D:\\SERVER\\WWW\\t...')
+#2 D:\SERVER\WWW\trex\index.php(17): require('D:\\SERVER\\WWW\\t...')
+#3 {main}
+  thrown
+
+2018-07-01T10:48:55+00:00 CRITICAL Uncaught Error: Class name must be a valid object or a string in D:\SERVER\WWW\trex\wp-content\themes\UDFT\front-page.php:9
+Stack trace:
+#0 D:\SERVER\WWW\trex\wp-includes\template-loader.php(74): include()
+#1 D:\SERVER\WWW\trex\wp-blog-header.php(19): require_once('D:\\SERVER\\WWW\\t...')
+#2 D:\SERVER\WWW\trex\index.php(17): require('D:\\SERVER\\WWW\\t...')
+#3 {main}
+  thrown
+
+2018-07-01T10:49:33+00:00 CRITICAL Uncaught Error: Class name must be a valid object or a string in D:\SERVER\WWW\trex\wp-content\themes\UDFT\front-page.php:9
+Stack trace:
+#0 D:\SERVER\WWW\trex\wp-includes\template-loader.php(74): include()
+#1 D:\SERVER\WWW\trex\wp-blog-header.php(19): require_once('D:\\SERVER\\WWW\\t...')
+#2 D:\SERVER\WWW\trex\index.php(17): require('D:\\SERVER\\WWW\\t...')
+#3 {main}
+  thrown
+
+2018-07-01T13:18:05+00:00 CRITICAL Uncaught Error: Call to undefined function get_stylesheet_url() in D:\SERVER\WWW\trex\wp-content\themes\UDFT\functions.php:511
+Stack trace:
+#0 D:\SERVER\WWW\trex\wp-content\themes\UDFT\front-page.php(12): UDFT::get_archives_links(Array, Array, Array)
+#1 D:\SERVER\WWW\trex\wp-includes\template-loader.php(74): include('D:\\SERVER\\WWW\\t...')
+#2 D:\SERVER\WWW\trex\wp-blog-header.php(19): require_once('D:\\SERVER\\WWW\\t...')
+#3 D:\SERVER\WWW\trex\index.php(17): require('D:\\SERVER\\WWW\\t...')
+#4 {main}
+  thrown
+
+2018-07-01T13:18:31+00:00 CRITICAL Uncaught Error: Call to undefined function get_stylesheet_directory_url() in D:\SERVER\WWW\trex\wp-content\themes\UDFT\functions.php:511
+Stack trace:
+#0 D:\SERVER\WWW\trex\wp-content\themes\UDFT\front-page.php(12): UDFT::get_archives_links(Array, Array, Array)
+#1 D:\SERVER\WWW\trex\wp-includes\template-loader.php(74): include('D:\\SERVER\\WWW\\t...')
+#2 D:\SERVER\WWW\trex\wp-blog-header.php(19): require_once('D:\\SERVER\\WWW\\t...')
+#3 D:\SERVER\WWW\trex\index.php(17): require('D:\\SERVER\\WWW\\t...')
+#4 {main}
+  thrown
+
