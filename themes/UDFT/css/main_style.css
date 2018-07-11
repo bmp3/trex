@@ -36,7 +36,8 @@ a, a:focus, a:hover { text-decoration : none; }
 .top-menu > li:first-child a { display : none; }
 .top-menu > li:first-child:before { font-family : FontAwesome; content : '\f015'; }
 .top-menu > li:last-child { border : none; }
-.top-menu .sub-menu { display : none; }
+.top-menu .sub-menu { position : absolute; width : 300px; top : 500px; visibility : hidden; opacity : 0; transition : top 1s; }
+.top-menu > li:hover .sub-menu { top : 50px; visibility : visible; opacity : 1; }
 
 .top-info-box { position : relative; font-family : 'PT Serif, arial'; height : 150px; background-color : #fff; color : #808369; font-weight : 700; text-transform : uppercase; font-size : 14px; }
 .top-info-box .info-block { display : flex; align-items : center; flex-wrap : wrap; }

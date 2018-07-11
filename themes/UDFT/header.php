@@ -31,7 +31,7 @@
 			<header class="header clear" role="banner">
 
                 <nav class="nav" role="navigation">
-                    <?php wp_nav_menu( array( 'container_class' => 'top-menu-box', 'menu_class' => 'top-menu' ) ); ?>
+                    <?php wp_nav_menu( array( 'menu' => 'top-menu', 'container_class' => 'top-menu-box', 'menu_class' => 'top-menu' ) ); ?>
                 </nav>
 
                 <div class="top-info-box row">
