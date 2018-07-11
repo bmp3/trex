@@ -1,8 +1,9 @@
-<?php /* Template Name: Demo Page Template */ get_header(); ?>
+<?php /* Template Name: Front Page Template */ get_header(); ?>
 
 	<main role="main">
-		<!-- section -->
-		<section>
+
+		<section class="welcome-section">
+            <div class="container">
 
 			<?php
 
@@ -14,8 +15,34 @@
 
 			?>
 
+            </div>
 		</section>
-		<!-- /section -->
+
+        <section class="menu-section">
+            <div class="container">
+
+			<?php
+
+			echo udft::section_header( 'catering', 'Our Menu' );
+            echo udft::get_product_cats();
+
+			?>
+
+            </div>
+        </section>
+
+        <section class="services full-width">
+            <div class="container">
+
+				<?php
+
+				echo udft::section_header( 'services', 'Planning a Fabulous Event?' );
+
+				?>
+
+            </div>
+        </section>
+
 	</main>
 
 <?php get_sidebar(); ?>

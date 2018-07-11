@@ -533,6 +533,49 @@ class UDFT {
 
 	}
 
+
+	static function get_product_cats() {
+
+
+		$args = array(
+			'taxonomy' => 'product_cat',
+			'orderby' => 'name',
+			'hierarchical' => 0,
+			'hide_empty' => 0,
+		);
+		$pr_cats = get_categories($args);
+
+		$cats = '';
+		foreach ( $pr_cats as $cat ) {
+
+			if ( $cat->name != 'Uncategorized' ) {
+				$img_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+				$image  = wp_get_attachment_url( $img_id );
+				if ( $image ) {
+					$image = '<img src="' . $image . '" alt="' . $cat->name . '" />';
+				}
+
+				$cats .=
+					'<div class="product-cat-link column-4">
+		                <div class="pct-content">' .
+							$image .
+							'<div class="pct-title">' . $cat->name . '</div>
+					        <div class="round-link-box bottom"><a class="round-link" href="' . get_term_link( $cat->term_id, 'product_cat' ) . '">' . '' . '</a></div>
+					    </div> 
+					</div>';
+			}
+		}
+
+		$out =
+			'<div class="product-cats-box columns-box">
+                <div class="product-cats-row columns-row gap-30">' .
+					$cats .
+			    '</div>
+            </div>';
+
+		return $out;
+	}
+
 }
 
 ?>
