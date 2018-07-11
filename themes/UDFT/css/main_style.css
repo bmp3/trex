@@ -12,7 +12,7 @@
 @import url('https://fonts.googleapis.com/css?family=Yellowtail');
 
 
-body { font-family: Georgia, 'Times New Roman', Times, serif; }
+body { font-family: 'PT Serif', serif; }
 ul { list-style : none; margin : 0; padding : 0; }
 a, a:focus, a:hover { text-decoration : none; }
 .blue { color : #50a5d1; }
@@ -99,6 +99,23 @@ a.slider-btn { display : block; font-size : 16px; font-weight : 700; padding : 4
 .pct-content .round-link-box { }
 .pct-content .round-link { }
 .pct-conentt .round-link:before { }
+
+
+.services-box { display : flex; flex-wrap : wrap; }
+.sv-pic { flex : 0 0 430px; border-radius : 50%; min-height : 430px; background-image : url(../img/canapes.jpg); background-size : cover; background-repeat : no-repeat; }
+.sv-list { display : flex; flex : 0 0 calc((100% - 430px)/2); }
+.sv-list .sv-content { display : flex; }
+.sv-list.left .sv-content { flex-direction : row; text-align : right; }
+.sv-list.left .sv-number-box { text-align : left; padding-left : 20px; }
+.sv-list.right .sv-number-box { text-align : right; padding-right : 20px; }
+.sv-list.right .sv-content { flex-direction : row-reverse; text-align : left; }
+.sv-box { display : flex; flex-wrap : wrap; flex-direction: column; justify-content: space-between; }
+.sv-content-box { flex : 0 0 calc(100% - 100px); }
+.sv-content-box .sv-title { text-transform : uppercase; padding-bottom : 18px; border-bottom : 1px solid #808369; color : #808369; }
+.sv-content-box .sv-excerpt { font-size : 14px; }
+.sv-number-box { flex : 0 0 100px; }
+.sv-number-box .sv-number { display: inline; line-height: 1; font-size : 40px; font-weight : 700; opacity : 0.5; }
+
 
 @media screen and ( max-width : 1187px ) {
 

@@ -31,7 +31,7 @@ function register_post_types(){
         'rewrite'           => array( 'slug' => 'events', 'hierarchical' => true ),
     );
 
-    //register_taxonomy( 'events', array( 'event' ), $args );
+    register_taxonomy( 'events', array( 'event' ), $args );
 
     register_post_type('event', array(
         'label'  => 'events',
@@ -211,7 +211,7 @@ function register_post_types(){
         'query_var'           => true,
     ) );
 
-    //add_rewrite_rule( '^events/?$', 'index.php?post_type=event', 'top' );
+    add_rewrite_rule( '^events/?$', 'index.php?post_type=event', 'top' );
 
     flush_rewrite_rules();
 

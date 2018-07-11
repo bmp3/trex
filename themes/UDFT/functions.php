@@ -536,7 +536,6 @@ class UDFT {
 
 	static function get_product_cats() {
 
-
 		$args = array(
 			'taxonomy' => 'product_cat',
 			'orderby' => 'name',
@@ -574,6 +573,36 @@ class UDFT {
             </div>';
 
 		return $out;
+	}
+
+
+	static function get_service_excerpt( $include, $start = 1 ) {
+
+		$include = explode( ',', $include );
+		$cats = array();
+		foreach ( $include as $cat ) {
+			$cats[] = get_term_by( 'slug', $cat, 'events' );
+		}
+
+		$i = $start;
+        $out = '<div class="sv-box">';
+        foreach ( $cats as $cat ) {
+        	$out .=
+				'<div class="sv-content">
+					<div class="sv-content-box">
+						<div class="sv-title">' . $cat->name . '</div>
+						<div class="sv-excerpt">' . $cat->description . '</div>
+					</div>
+					<div class="sv-number-box">
+						<div class="sv-number">0' . $i . '</div>
+					</div>
+                </div>';
+        	$i++;
+		}
+		$out .= '</div>';
+
+        return $out;
+
 	}
 
 }

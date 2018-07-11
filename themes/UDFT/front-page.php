@@ -37,7 +37,17 @@
 				<?php
 
 				echo udft::section_header( 'services', 'Planning a Fabulous Event?' );
-
+                echo
+                '<div class="services-box">
+                     <div class="sv-list left">' .
+                         udft::get_service_excerpt( 'weddings, corporate, socials', 1 ) .
+                     '</div>
+                     <div class="sv-pic"></div>
+                     <div class="sv-list right">' .
+                         udft::get_service_excerpt( 'picnics, festivals, private_paties', 4 ) .
+                     '</div>
+                </div>';
+				
 				?>
 
             </div>
