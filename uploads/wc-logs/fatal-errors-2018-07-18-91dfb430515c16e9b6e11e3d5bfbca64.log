@@ -1,0 +1,12 @@
+2018-07-18T17:25:15+00:00 CRITICAL Uncaught Error: Class name must be a valid object or a string in D:\SERVER\WWW\trex\wp-content\themes\UDFT\loop.php:3
+Stack trace:
+#0 D:\SERVER\WWW\trex\wp-includes\template.php(690): require()
+#1 D:\SERVER\WWW\trex\wp-includes\template.php(647): load_template('D:\\SERVER\\WWW\\t...', false)
+#2 D:\SERVER\WWW\trex\wp-includes\general-template.php(155): locate_template(Array, true, false)
+#3 D:\SERVER\WWW\trex\wp-content\themes\UDFT\category.php(9): get_template_part('loop')
+#4 D:\SERVER\WWW\trex\wp-includes\template-loader.php(74): include('D:\\SERVER\\WWW\\t...')
+#5 D:\SERVER\WWW\trex\wp-blog-header.php(19): require_once('D:\\SERVER\\WWW\\t...')
+#6 D:\SERVER\WWW\trex\index.php(17): require('D:\\SERVER\\WWW\\t...')
+#7 {main}
+  thrown
+

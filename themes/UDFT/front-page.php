@@ -53,6 +53,30 @@
             </div>
         </section>
 
+        <section class="posts-section">
+            <div class="container">
+
+                <?php
+
+                global $post;
+                $store = $post;
+
+                $posts = get_posts( array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 3, 'orderby' => 'date', 'order' => 'DESC' ) );
+
+                echo udft::section_header( 'blog', 'Recent Articles' );
+                echo '<div class="posts-box row">';
+                foreach ( $posts as $p ) {
+                    $post = $p;
+                    udft::get_template_part( 'tpl/blog-single-archive', null, 'echo' );
+                }
+                echo '</div>';
+                $post = $store;
+
+                ?>
+
+            </div>
+        </section>
+
 	</main>
 
 <?php get_sidebar(); ?>

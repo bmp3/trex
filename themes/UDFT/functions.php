@@ -22,6 +22,7 @@ if (function_exists('add_theme_support'))
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('post-archive', 370, 190, true);
 
     add_theme_support('automatic-feed-links');
 
@@ -51,6 +52,7 @@ class UDFT {
 		);
 
 		add_filter( 'widget_text', 'do_shortcode' );
+        add_filter( 'post_class', 'udft::filter_post_class', 10, 3 );
 
 		if ( ! is_admin() ) {
 
@@ -602,6 +604,17 @@ class UDFT {
 		$out .= '</div>';
 
         return $out;
+
+	}
+
+
+	static function filter_post_class( $classes, $class, $post_id ) {
+
+		if ( is_archive() || is_front_page() ) {
+			$classes[] = 'post-archive-box col';
+		}
+
+		return $classes;
 
 	}
 

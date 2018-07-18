@@ -117,6 +117,12 @@ a.slider-btn { display : block; font-size : 16px; font-weight : 700; padding : 4
 .sv-number-box .sv-number { display: inline; line-height: 1; font-size : 40px; font-weight : 700; opacity : 0.5; }
 
 
+.posts-box { justify-content: space-between; }
+.post-archive-box { flex : 0 0 calc(33.3333% - 15px); text-align : center; }
+.post-archive-box .post-archive-thumb { display : block; }
+.post-archive-box .post-archive-thumb img { width : 100%; }
+
+
 @media screen and ( max-width : 1187px ) {
 
     .site-content { width : 100%; }
