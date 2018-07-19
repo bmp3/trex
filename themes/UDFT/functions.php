@@ -730,7 +730,6 @@ class UDFT {
 
     }
 
-
 	static function get_testimonials_block() {
 
 		$tss = get_posts( array( 'post_type' => 'testimonial', 'post_status' => 'publish', 'posts_per_page' => 5, 'orderby' => 'date', 'order' => 'ASC' ) );
