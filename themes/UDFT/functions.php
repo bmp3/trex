@@ -64,6 +64,11 @@ class UDFT {
 			wp_register_script( 'custom_js', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), false, true );
 			wp_enqueue_script( 'custom_js' );
 
+			wp_enqueue_style( 'slick_css', get_stylesheet_directory_uri() . '/js/slick/slick.css' );
+			wp_enqueue_style( 'slick_theme-css', get_stylesheet_directory_uri() . '/js/slick/slick-theme.css' );
+			wp_register_script( 'slick_js', get_stylesheet_directory_uri() . '/js/slick/slick.js', array( 'jquery' ), false, true );
+			wp_enqueue_script( 'slick_js' );
+
 		} else {
 			wp_enqueue_style( 'kmwp_admin_css', get_stylesheet_directory_uri() . '/css/admin/admin.css' );
 			wp_enqueue_script( 'jquery-ui-core', array( 'jquery' ) );
@@ -615,6 +620,155 @@ class UDFT {
 		}
 
 		return $classes;
+
+	}
+
+
+	static function get_projects_block() {
+
+		$prs = get_posts( array( 'post_type' => 'project', 'post_status' => 'publish', 'posts_per_page' => 5, 'orderby' => 'date', 'order' => 'ASC' ) );
+
+		$inner_left = $inner_right = ''; $i = 0;
+		foreach( $prs as $pr ) {
+			$img = get_the_post_thumbnail( $pr->ID, 'full', array( 'class' => 'project-img' ) );
+			if ( $i <= 3 ) {
+				$inner_left .=
+					'<div class="inner-project-col col">
+                         <div class="project-content"><a class="project-link" href="' . get_permalink( $pr->ID ) . '">' .
+                             $img .
+                         '</a></div>
+                     </div>';
+			}
+			else {
+				$inner_right =
+					'<div class="inner-project-col col"><a class="project-link" href="' . get_permalink( $pr->ID ) . '">' .
+                         $img .
+                     '</a></div>';
+			}
+			$i++;
+		}
+
+		$out =
+			'<div class="project-box row">
+                 <div class="project-col col lefted">
+                     <div class="inner-project-box row">' .
+			             $inner_left .
+		             '</div>    
+                 </div>
+                 <div class="project-col col righted">' .
+                     $inner_right .
+                 '</div>
+             </div>';
+
+		return $out;
+
+    }
+
+
+    static function get_team_block() {
+
+	    $rss = get_posts( array( 'post_type' => 'team', 'post_status' => 'publish', 'posts_per_page' => 5, 'orderby' => 'date', 'order' => 'ASC' ) );
+
+	    $out =
+		    '<div class="team-box">
+		    <div class="rss-box">';
+
+	    foreach( $rss as $rs ) {
+
+		    $content = str_replace( ']]>', ']]>', $rs->post_content );
+
+		    $out .=
+			    '<div class="rs-box">
+			    <div class="rs-inner-box">
+				    <div class="rs-img-box">' . get_the_post_thumbnail( $rs->ID, array( 250, 250 ), array( 'class' => 'rs-carousel-img' ) ) . '</div>
+					<div class="rs-name">' . get_the_title( $rs ) . '</div>
+					<div class="rs-content">' . get_the_excerpt( $rs ) . '</div>
+				</div>
+			</div>';
+	    }
+
+	    $out .= '</div>
+		</div>';
+
+	    $out .=
+		    '<script type="text/javascript">jQuery(document).ready( function( $ ) {
+				$(".rss-box").slick({
+					slidesToShow: 4,
+					arrows : true,
+					prevArrow : "<button class=slick-prev></button>",
+					nextArrow : "<button class=slick-next></button>",
+					dots : false,
+		            responsive: [
+						{
+						  breakpoint: 1024,
+						  settings: {
+							slidesToShow: 3,
+							slidesToScroll: 1,
+							infinite: true,
+						  }
+						},
+						{
+						  breakpoint: 600,
+						  settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1
+						  }
+						},
+						{
+						  breakpoint: 480,
+						  settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						  }
+						}
+					  ]						
+				});
+			});
+		</script>';
+
+	    return $out;
+
+    }
+
+
+	static function get_testimonials_block() {
+
+		$tss = get_posts( array( 'post_type' => 'testimonial', 'post_status' => 'publish', 'posts_per_page' => 5, 'orderby' => 'date', 'order' => 'ASC' ) );
+
+		$out =
+			'<div class="testimonials-box">
+		    <div class="tss-box">';
+
+		foreach( $tss as $ts ) {
+
+			$content = str_replace( ']]>', ']]>', $ts->post_content );
+
+			$out .=
+				'<div class="ts-box">
+			    <div class="ts-inner-box">
+				    <div class="ts-img-box">' . get_the_post_thumbnail( $ts->ID, array( 250, 250 ), array( 'class' => 'ts-carousel-img' ) ) . '</div>
+					<div class="ts-name">' . get_the_excerpt( $ts ) . '</div>
+					<div class="ts-content">' . $content . '</div>
+				</div>
+			</div>';
+		}
+
+		$out .= '</div>
+		</div>';
+
+		$out .=
+			'<script type="text/javascript">jQuery(document).ready( function( $ ) {
+				$(".tss-box").slick({
+					slidesToShow: 1,
+					arrows : true,
+					prevArrow : "<button class=slick-prev></button>",
+					nextArrow : "<button class=slick-next></button>",
+					dots : false					
+				});
+			});
+		</script>';
+
+		return $out;
 
 	}
 

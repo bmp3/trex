@@ -18,6 +18,49 @@
             </div>
 		</section>
 
+
+        <section class="projects-section">
+            <div class="container-fluid">
+
+				<?php
+
+				echo udft::section_header( 'gallery', 'Check Out Our Recent Projects' );
+                echo udft::get_projects_block();
+
+				?>
+
+            </div>
+        </section>
+
+
+        <section class="team-section">
+            <div class="container-fluid">
+
+				<?php
+
+				echo udft::section_header( 'stuff', 'Meet the Team' );
+				echo udft::get_team_block();
+
+				?>
+
+            </div>
+        </section>
+
+
+        <section class="testimonials-section">
+            <div class="container-fluid">
+
+				<?php
+
+				echo udft::section_header( 'testimonials', 'Clients About Us' );
+				echo udft::get_testimonials_block();
+
+				?>
+
+            </div>
+        </section>
+
+
         <section class="menu-section">
             <div class="container">
 
@@ -73,6 +116,20 @@
                 $post = $store;
 
                 ?>
+
+            </div>
+        </section>
+
+
+        <section class="contact-form-section">
+            <div class="container-fluid">
+
+				<?php
+
+				echo udft::section_header( 'contact us', 'Leave a Feedback or Ask a Question' );
+				echo do_shortcode( '[contact-form-7 id="58" title="Form 1"]' );
+
+				?>
 
             </div>
         </section>

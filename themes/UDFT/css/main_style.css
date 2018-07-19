@@ -117,10 +117,46 @@ a.slider-btn { display : block; font-size : 16px; font-weight : 700; padding : 4
 .sv-number-box .sv-number { display: inline; line-height: 1; font-size : 40px; font-weight : 700; opacity : 0.5; }
 
 
+.project-box { margin : 0 -15px; }
+.project-col { /*padding : 0 15px;*/ }
+.project-col.lefted { flex : 0 0 66.6667%; }
+.project-col.lefted img { max-height : 360px; }
+.project-col.righted { flex : 0 0 33.33%; }
+.project-col.righted img { max-height : 750px; }
+.inner-project-box { }
+.inner-project-col { flex : 0 0 50%; margin : 15px 0; padding : 0 15px; }
+.project-content { }
+
+
+.team-section { background-color : #f3f1ec; }
+.reviews-box { }
+.reviews-box > h3 { text-transform : uppercase; }
+.rss-box { }
+.rs-box{ position : relative; margin : 0 15px; }
+.rs-inner-box { position : relative; }
+.rs-img-box { position : relative; width : 250px; height : 250px; border-radius : 50%; margin : 0 auto 20px auto; overflow : hidden; }
+.rs-img-box:before { }
+.rs-img-box img { }
+.rs-name { text-align : center; font-size : 22px; font-weight : 700; margin : 0 0 10px 0; }
+.rs-content { text-align : center; }
+
+
+
 .posts-box { justify-content: space-between; }
 .post-archive-box { flex : 0 0 calc(33.3333% - 15px); text-align : center; }
 .post-archive-box .post-archive-thumb { display : block; }
 .post-archive-box .post-archive-thumb img { width : 100%; }
+
+
+.contact-form-section { background-color : #f3f1ec; }
+.cf7-form-content { max-width : 770px; margin : 0 auto; }
+.cf7-form-content .form-inputs { justify-content : space-between; }
+.cf7-form-content .input-box { font-size : 22px; }
+.cf7-form-content .input-box.half { flex : 0 0 328px; max-width : 328px; }
+.cf7-form-content input { padding : 0 0 0 42px; line-height : 3em; border : none; background-color : #fff; max-width : 100%; font-weight : 700; text-transform : uppercase; color : #808369;  }
+.cf7-form-content input::placeholder { text-transform : uppercase; color : #808369; opacity : 1; }
+.cf7-form-content textarea { padding : 0 0 0 42px; line-height : 3em; width : 100%; max-height : 210px; background-color : #fff; border : none; margin-top : 28px; font-weight : 700; text-transform : uppercase; color : #808369; }
+.cf7-form-content textarea::placeholder { text-transform : uppercase; color : #808369; opacity : 1; }
 
 
 @media screen and ( max-width : 1187px ) {
