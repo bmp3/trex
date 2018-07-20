@@ -746,8 +746,8 @@ class UDFT {
 				'<div class="ts-box">
 			    <div class="ts-inner-box">
 				    <div class="ts-img-box">' . get_the_post_thumbnail( $ts->ID, array( 250, 250 ), array( 'class' => 'ts-carousel-img' ) ) . '</div>
+				    <div class="ts-content">' . $content . '</div>
 					<div class="ts-name">' . get_the_excerpt( $ts ) . '</div>
-					<div class="ts-content">' . $content . '</div>
 				</div>
 			</div>';
 		}
