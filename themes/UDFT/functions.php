@@ -597,7 +597,7 @@ class UDFT {
         	$out .=
 				'<div class="sv-content">
 					<div class="sv-content-box">
-						<div class="sv-title">' . $cat->name . '</div>
+						<div class="sv-title"><a href="' . get_term_link( $cat->term_id ) . '">' . $cat->name . '</a></div>
 						<div class="sv-excerpt">' . $cat->description . '</div>
 					</div>
 					<div class="sv-number-box">

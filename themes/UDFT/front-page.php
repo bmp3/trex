@@ -26,7 +26,7 @@
 
 				<?php
 
-				echo udft::section_header( 'about us', 'A Short Story About Our Company' );
+				echo udft::section_header( 'chef', 'A Short Story About Our Company' );
 				echo
 				'<div class="shifted-box story-box">
                      <div class="sb-content-box lefted row">
@@ -57,7 +57,7 @@
 
 				echo udft::section_header( 'catering', 'Our Menu' );
 				echo udft::get_product_cats();
-				echo '<div class="subtitle">' . __( '& much more sensatial food & drinks', 'tmp-tpl' );
+				echo '<div class="subtitle">' . __( '& much more sensatial food & drinks', 'tmp-tpl' ) . '</div>';
                 echo '<a class="btn" href="#">' . __( 'view full menu' , 'thm-tpl' ) . '</a>';
 
 				?>
@@ -91,10 +91,11 @@
 
 
         <section class="book-section">
+            <div class="bg-box"></div>
             <div class="container">
 	            <?php
 
-	            echo udft::section_header( 'book today', 'Book Your Tasting Session or Discuss Your Project' );
+	            echo udft::section_header( 'book today!', 'Book Your Tasting Session or Discuss Your Project' );
 	            echo '<a class="btn" href="#">' . __( 'send free request' , 'thm-tpl' ) . '</a>';
 
 	            ?>
@@ -158,10 +159,13 @@
                          <div class="sb-col pic col"></div>
                          <div class="sb-col text col">
                              <div class="sb-content">
-                                 <div class="sb-title">A Perfect Blend of Sensational Food, Inspiring Ideas and Professional Staff</div>
-                                 <div class="sb-text">
-                                     <span class="capitalized">1997</span>                                 
+                                 <!--<div class="sb-title">A Perfect Blend of Sensational Food, Inspiring Ideas and Professional Staff</div>-->
+                                 <div class="sb-text">                                
                                      <span>Lorem ipsum dolor sit amet, consecte adipiscing elit, sed diam Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure. dolor in hendrerit in vulputate velit.</span>
+                                     <div class="team-member">
+                                         <span class="name">Andreo Moreno,</span>
+                                         <span class="job"> Master-Chef</span>
+                                     </div>
                                  </div>
                                  <a class="btn" href="#">' . __( 'view all team' , 'thm-tpl' ) . '</a>
                              </div>
@@ -177,11 +181,11 @@
 
 
         <section class="team-section">
-            <div class="container-fluid">
+            <div class="container">
 
 				<?php
 
-				echo udft::section_header( 'stuff', 'Meet the Team' );
+				echo udft::section_header( 'staff', 'Meet the Team' );
 				echo udft::get_team_block();
 				echo '<a class="btn" href="#">' . __( 'send free request' , 'thm-tpl' ) . '</a>';
 
