@@ -26,7 +26,7 @@
 
 				<?php
 
-				echo udft::section_header( 'chef', 'A Short Story About Our Company' );
+				echo udft::section_header( 'about us', 'A Short Story About Our Company', 'white' );
 				echo
 				'<div class="shifted-box story-box">
                      <div class="sb-content-box lefted row">
@@ -152,7 +152,7 @@
 
 				<?php
 
-				echo udft::section_header( 'about us', 'A Short Story About Our Company' );
+				echo udft::section_header( 'about us', 'A Short Story About Our Company', 'white' );
 				echo
 				'<div class="shifted-box story-box">
                      <div class="sb-content-box lefted row">
@@ -224,7 +224,5 @@
         </section>
 
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

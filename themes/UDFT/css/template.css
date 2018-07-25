@@ -21,7 +21,7 @@ footer,
 header,
 nav,
 section {
-  display: block; }
+  display: block; overflow : hidden; }
 
 h1 {
   font-size: 2em;

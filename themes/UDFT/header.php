@@ -59,7 +59,10 @@
                 </div>
 
                 <div class="slider-box">
-                    <?php echo do_shortcode('[rev_slider alias="top_slider"]'); ?>
+                    <?php
+                        echo do_shortcode('[rev_slider alias="top_slider"]');
+                        echo '<div class="round-link-box bottom"><a class="round-link" href="' . site_url() . '/services">' . '' . '</a></div>';
+                    ?>
                 </div>
 
 			</header>

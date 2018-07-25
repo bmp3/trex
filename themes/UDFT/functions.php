@@ -484,10 +484,10 @@ class UDFT {
 
 	}
 
-    static function section_header( $title, $description ) {
+    static function section_header( $title, $description, $class = '' ) {
 
         return
-            '<div class="h-box">
+            '<div class="h-box ' . $class . '">
                  <div class="h-background"></div>
                  <div class="h-content">
 	                 <div class="h-description">
@@ -522,6 +522,7 @@ class UDFT {
 			}
 			$columns .=
 				'<div class="archives-link ' . $pt . ' column-3">
+				      <div class="bg-block"></div>
 				      <img class="pt-archive-img" src=" ' . get_stylesheet_directory_uri() . $imgs[$pt] . '">
 				      <div class="pt-archive-title">' . $info['title'] . '</div>
 				      <div class="round-link-box bottom"><a class="round-link" href="' . $pt_link . '">' . '' . '</a> </div> 
@@ -700,7 +701,7 @@ class UDFT {
 					dots : false,
 		            responsive: [
 						{
-						  breakpoint: 1024,
+						  breakpoint: 1178,
 						  settings: {
 							slidesToShow: 3,
 							slidesToScroll: 1,
@@ -708,14 +709,14 @@ class UDFT {
 						  }
 						},
 						{
-						  breakpoint: 600,
+						  breakpoint: 992,
 						  settings: {
 							slidesToShow: 2,
 							slidesToScroll: 1
 						  }
 						},
 						{
-						  breakpoint: 480,
+						  breakpoint: 768,
 						  settings: {
 							slidesToShow: 1,
 							slidesToScroll: 1

@@ -1,0 +1,12 @@
+2018-07-25T08:43:39+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_total() on null in D:\OS\OSPanel\domains\kmwp1\wp-content\themes\UDFT\footer.php:30
+Stack trace:
+#0 D:\OS\OSPanel\domains\kmwp1\wp-includes\template.php(688): require_once()
+#1 D:\OS\OSPanel\domains\kmwp1\wp-includes\template.php(647): load_template('D:\\OS\\OSPanel\\d...', true)
+#2 D:\OS\OSPanel\domains\kmwp1\wp-includes\general-template.php(76): locate_template(Array, true)
+#3 D:\OS\OSPanel\domains\kmwp1\wp-content\themes\UDFT\front-page.php(228): get_footer()
+#4 D:\OS\OSPanel\domains\kmwp1\wp-includes\template-loader.php(74): include('D:\\OS\\OSPanel\\d...')
+#5 D:\OS\OSPanel\domains\kmwp1\wp-blog-header.php(19): require_once('D:\\OS\\OSPanel\\d...')
+#6 D:\OS\OSPanel\domains\kmwp1\index.php(17): require('D:\\OS\\OSPanel\\d...')
+#7 {main}
+  thrown
+
