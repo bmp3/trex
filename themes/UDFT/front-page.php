@@ -221,6 +221,7 @@
 				?>
 
             </div>
+            <?php echo '<div class="round-link-box bottom"><span class="to-top-link-box">' . __( 'top', 'thm-tpl' ) . '</span><a class="round-link to-top-link" href="#">' . '' . '</a></div>'; ?>
         </section>
 
 	</main>

@@ -681,7 +681,7 @@ class UDFT {
 		    $out .=
 			    '<div class="rs-box">
 			    <div class="rs-inner-box">
-				    <div class="rs-img-box">' . get_the_post_thumbnail( $rs->ID, array( 250, 250 ), array( 'class' => 'rs-carousel-img' ) ) . '</div>
+				    <div class="rs-img-box" style="background-image:url(' . get_the_post_thumbnail_url( $rs->ID, 'large', array( 'class' => 'rs-carousel-img' ) ) . ')"></div>
 					<div class="rs-name">' . get_the_title( $rs ) . '</div>
 					<div class="rs-content">' . get_the_excerpt( $rs ) . '</div>
 				</div>

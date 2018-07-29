@@ -32,6 +32,9 @@
 
                 <nav class="nav" role="navigation">
                     <?php wp_nav_menu( array( 'menu' => 'top-menu', 'container_class' => 'top-menu-box', 'menu_class' => 'top-menu' ) ); ?>
+                    <div class="menu-button">
+                         <span></span><span></span><span></span>
+                    </div>
                 </nav>
 
                 <div class="top-info-box row">

@@ -1,8 +1,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <?php if ( has_post_thumbnail()) :  ?>
-        <a href="<?php the_permalink(); ?>" class="post-archive-thumb" title="<?php the_title(); ?>">
-            <?php the_post_thumbnail(array( 370, 190 ));  ?>
+        <?php
+            global $post;
+            $img = get_the_post_thumbnail_url( $post->ID, array( 740, 380 ) );
+        ?>
+        <a href="<?php the_permalink(); ?>" class="post-archive-thumb" title="<?php the_title(); ?>" style="background-image:url(<?php echo $img; ?>)">
         </a>
     <?php endif; ?>
 
